@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html,
+  body {
+    @apply h-auto w-auto overflow-auto selection:bg-slate-700 selection:text-white bg-slate-200 tracking-wide
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2 h-2
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-400 rounded-r 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-500 rounded-r
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-text
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex justify-center items-center
+  }
+
+  .vertical {
+    @apply flex flex-col gap-5
+  }
+
+  .horizontal {
+    @apply flex flex-row gap-5
+  }
+}
