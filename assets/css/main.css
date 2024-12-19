@@ -32,10 +32,10 @@
   }
 
   .vertical {
-    @apply flex flex-col gap-5
+    @apply flex flex-col
   }
 
   .horizontal {
-    @apply flex flex-row gap-5
+    @apply flex flex-row
   }
 }

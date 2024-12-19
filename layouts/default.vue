@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen center w-full relative vertical py-10">
-    <div class="w-full h-auto horizontal items-center justify-between px-20">
-      <PageHeader title="STI grade calculator" description="Let's calculate your final grade" />
+  <div class="h-screen center w-full relative vertical gap-5 py-10">
+    <div class="w-full h-auto horizontal items-center justify-between md:px-20 px-5">
+      <PageHeader title="STI final grade calculator" description="Let's calculate your final grade" />
       <FormButton buttonType="secondary" @click="onClick" label="New Subject"
         :icon="{ leftIcon: true, name: 'addSubject', iconClass: 'w-auto h-5' }" />
     </div>
@@ -17,6 +17,6 @@
 <script setup>
 
 function onClick() {
-  navigateTo('/test')
+  navigateTo('/input')
 }
 </script>

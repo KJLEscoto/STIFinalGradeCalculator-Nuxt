@@ -1,9 +1,9 @@
 <template>
   <div
-    class="text-xs fixed bottom-0 bg-primary w-full text-white py-1 tracking-wider px-20 flex justify-between items-center">
+    class="text-xs fixed bottom-0 bg-primary w-full text-white py-1 tracking-wider md:px-20 px-10 flex justify-between items-center">
     <p><span class="font-bold">Developed by:</span> KinWebb</p>
     <p class="italic">version {{ version }}.{{ commits }}.{{ branchCount }} ({{ branch }})</p>
-    <div class="horizontal">
+    <div class="hidden md:horizontal gap-3">
       <NuxtLink target="_blank" v-for="icon in icons" :to="icon.link"
         class="*:w-auto *:h-5 *:cursor-pointer *:hover:text-slate-300">
         <Icon :name="icon.name" />
@@ -41,7 +41,7 @@ const getTotalCommits = async () => {
   try {
     while (true) {
       const response = await fetch(
-        `https://api.github.com/repos/KJLEscoto/Theft-Prediction-System/commits?per_page=${perPage}&page=${page}`
+        `https://api.github.com/repos/KJLEscoto/STIFinalGradeCalculator/commits?per_page=${perPage}&page=${page}`
       );
 
       if (response.ok) {
@@ -65,7 +65,7 @@ const getTotalCommits = async () => {
 const getBranchDetails = async () => {
   try {
     const response = await fetch(
-      'https://api.github.com/repos/KJLEscoto/Theft-Prediction-System/branches'
+      'https://api.github.com/repos/KJLEscoto/STIFinalGradeCalculator/branches'
     );
 
     if (response.ok) {
