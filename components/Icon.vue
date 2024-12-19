@@ -24,13 +24,14 @@
     </svg>
   </template>
 
-  <!-- add subject -->
-  <template v-if="name == 'addSubject'">
+  <!-- add -->
+  <template v-if="name == 'add'">
     <svg :class="className" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
       <path fill="currentColor"
-        d="M18 20v-3h-3v-2h3v-3h2v3h3v2h-3v3zM3 21q-.825 0-1.412-.587T1 19V5q0-.825.588-1.412T3 3h14q.825 0 1.413.588T19 5v5h-2V8H3v11h13v2zM3 6h14V5H3zm0 0V5z" />
+        d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z" />
     </svg>
   </template>
+
 
   <!-- left arrow -->
   <template v-if="name == 'leftArrow'">
