@@ -1,26 +1,23 @@
 <template>
-
-  <p class="mb-5 text-primary text-sm font-semibold">Subject/s: <span class=" font-bold">{{ subjects.length }}</span>
-  </p>
   <div v-if="subjects.length > 0" class="grid md:grid-cols-3 grid-cols-1 gap-5 transition-all duration-500 ease-in">
     <div v-for="(subject, index) in subjects" :key="index"
       class="p-5 bg-slate-100 rounded shadow vertical justify-between gap-4">
       <section class="vertical gap-3">
-        <h2 class="text-xl font-semibold capitalize truncate text-primary-text">
+        <h2 class="md:text-xl text-base font-semibold capitalize truncate text-primary-text">
           {{ subject.subject }}
         </h2>
         <section class="horizontal flex-wrap gap-2">
           <div
-            class="text-[10px] bg-slate-200 tracking-wider px-2 py-1 rounded font-medium text-slate-400 cursor-default w-fit">
+            class="md:text-[10px] text-[7px] bg-slate-200 tracking-wider px-2 py-1 rounded font-medium text-slate-400 cursor-default w-fit">
             {{ subject.id }}
           </div>
           <div
-            class="text-[10px] bg-slate-200  tracking-wider px-2 py-1 rounded font-medium text-slate-400 cursor-default w-fit">
+            class="md:text-[10px] text-[7px] bg-slate-200  tracking-wider px-2 py-1 rounded font-medium text-slate-400 cursor-default w-fit">
             {{ getFinalGrade(subject.finalGrade).description }}
           </div>
         </section>
         <Divider />
-        <p class="text-slate-500">
+        <p class="text-slate-500 md:text-base text-sm">
           Final Grade:
           <span class="font-bold">
             {{ getFinalGrade(subject.finalGrade).grade }}
@@ -30,12 +27,12 @@
       <section class="flex gap-4 items-center w-full">
         <span class="w-[70%]">
           <FormButton label="view grade" className="w-full" @click="viewDetails(subject.id)"
-            :icon="{ leftIcon: true, name: 'view', iconClass: 'w-auto h-5' }" />
+            :icon="{ leftIcon: true, name: 'view', iconClass: 'w-auto md:h-5 h-4' }" />
         </span>
         <span class="w-[30%]">
           <FormButton @click="deleteGrade(subject)" label="delete" buttonType="secondary"
             className="text-red-500 hover:bg-red-100 border-red-500 active:bg-red-200 w-full"
-            :icon="{ leftIcon: true, name: 'delete', iconClass: 'w-auto h-5' }" />
+            :icon="{ leftIcon: true, name: 'delete', iconClass: 'w-auto md:h-5 h-4' }" />
         </span>
       </section>
     </div>

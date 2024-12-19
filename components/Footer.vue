@@ -1,8 +1,8 @@
 <template>
   <div
-    class="text-xs fixed bottom-0 bg-primary w-full text-white py-1 tracking-wider md:px-20 px-10 flex justify-between items-center">
+    class="text-xs fixed bottom-0 bg-primary w-full text-white py-1 tracking-wider md:px-20 px-5 flex justify-between items-center">
     <p><span class="font-bold">Developed by:</span> KinWebb</p>
-    <p class="italic">version {{ version }}.{{ commits }}.{{ branchCount }} ({{ branch }})</p>
+    <p class="italic">version {{ version }}.{{ commits }}.{{ branchCount }}</p>
     <div class="hidden md:horizontal gap-3">
       <NuxtLink target="_blank" v-for="icon in icons" :to="icon.link"
         class="*:w-auto *:h-5 *:cursor-pointer *:hover:text-slate-300">

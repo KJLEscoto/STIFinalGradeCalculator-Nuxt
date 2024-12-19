@@ -1,10 +1,10 @@
 <template>
   <div>
     <button type="submit" :disabled="isDisable" :class="[
-      `h-auto w-full border-2 py-1 px-3 text-sm rounded cursor-pointer capitalize tracking-wide font-medium flex justify-center items-center gap-1`,
+      `h-auto w-full border-2 py-1 px-3 md:text-sm text-xs rounded cursor-pointer capitalize tracking-wide font-medium flex justify-center items-center gap-1`,
       buttonType === 'primary'
         ? `${className} bg-primary border-primary text-white hover:bg-primary/85 active:bg-primary`
-        : `${className} border-primary text-primary-text hover:bg-secondary-hover active:bg-secondary-active`
+        : `${className} border-primary text-primary-text`
     ]"> 
       <Icon v-if="icon?.leftIcon" :name="icon.name" :className="icon.iconClass" />
       <p :class="[`text-center`, hideLabel ? 'md:block hidden' : 'block']">{{ label }}</p>

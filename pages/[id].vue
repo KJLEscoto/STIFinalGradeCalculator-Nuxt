@@ -4,7 +4,7 @@
     <div class="bg-primary p-3 rounded-sm text-white text-sm tracking-wider font-medium">
 
       <div class="horizontal justify-between">
-        <h1 class="capitalize text-lg font-medium">{{ subject.subject }}</h1>
+        <h1 class="capitalize md:text-lg text-base font-medium">{{ subject.subject }}</h1>
         <FormButton @click="download"
           className="flex w-auto justify-center items-center gap-2 cursor-not-allowed border shadow-sm px-2 py-1 rounded bg-primary-text opacity-40 text-xs"
           label="download grade" :hide-label="true"
@@ -26,23 +26,23 @@
           </tr>
         </thead>
         <tbody class="text-slate-500">
-          <tr class="*:border *:border-slate-400 *:px-4 *:py-2">
+          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:text-sm">
             <td>Prelim</td>
             <td>{{ subject.grades.prelim }}</td>
           </tr>
-          <tr class="*:border *:border-slate-400 *:px-4 *:py-2">
+          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:text-sm">
             <td>Midterm</td>
             <td>{{ subject.grades.midterm }}</td>
           </tr>
-          <tr class="*:border *:border-slate-400 *:px-4 *:py-2">
+          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:text-sm">
             <td>Prefinal</td>
             <td>{{ subject.grades.prefinal }}</td>
           </tr>
-          <tr class="*:border *:border-slate-400 *:px-4 *:py-2">
+          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:text-sm">
             <td>Finals</td>
             <td>{{ subject.grades.finals }}</td>
           </tr>
-          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:font-bold *:bg-slate-200 *:text-slate-700">
+          <tr class="*:border *:border-slate-400 *:px-4 *:py-2 *:font-bold *:bg-slate-200 *:text-slate-700 *:text-sm">
             <td>Average</td>
             <td>{{ subject.finalGrade }}</td>
           </tr>
@@ -50,11 +50,11 @@
       </table>
 
       <div class="vertical gap-5">
-        <h1 class="capitalize text-primary font-medium md:text-start text-center -mb-3">grading system</h1>
+        <h1 class="capitalize text-primary text-base font-medium md:text-start text-center -mb-3">grading system</h1>
 
         <Divider />
 
-        <p class="text-slate-600 md:text-base text-sm text-center font-medium italic">Average = (Prelim 20%) + (Midterm
+        <p class="text-slate-600 md:text-base text-xs text-center font-medium italic">Average = (Prelim 20%) + (Midterm
           20%) + (Prefinal 20%) + (Finals 40%)</p>
 
         <div class="md:flex md:flex-wrap gap-5 items-center px-5">
@@ -85,7 +85,7 @@
 
           <div class="vertical m-auto">
             <ul v-for="(item) in gradingSystem" :class="[
-              'grid grid-cols-2 gap-3 items-center text-sm text-slate-500 font-medium px-5 py-1',
+              'grid grid-cols-2 gap-5 items-center md:text-sm text-[9.5px] text-slate-500 font-medium px-5 py-1',
               item.grade == numericalValue.grade ? 'bg-slate-600 text-white rounded-full' : ''
             ]" :style="item.grade == numericalValue.grade ? { color: progressColor } : {}">
               <li class="text-end">{{ item.range[0] }} - {{ item.range[1] }}%</li>
