@@ -11,10 +11,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'STI Final Grade Calculator | KinWebb',
+      title: 'KinWebb | Final Grade Calculator',
       meta: [
         {
-          name: 'description', content: 'Website to calculate your final grades in STI.'
+          name: 'description', content: 'Website to calculate your final grades with predefined average formula.'
         }
       ],
       link: [
